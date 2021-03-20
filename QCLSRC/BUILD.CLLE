@@ -23,5 +23,5 @@
              MONMSG     MSGID(CPF0000)
              ENDDO
              CRTBNDCL   PGM(&TGTLIB/PROVA) SRCFILE(&SRCLIB/QCLSRC) SRCMBR(PROVA) +
-                        OUTPUT(*NONE) ALWRTVSRC(*NO)
+                        OUTPUT(*PRINT) ALWRTVSRC(*NO)
 RETURN:      ENDPGM
