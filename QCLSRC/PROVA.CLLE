@@ -1,14 +1,16 @@
-    PGM                                                                                               
-    DCL        VAR(&PATH)      TYPE(*CHAR)               LEN(50)                                      
-    DCL        VAR(&SYNM_P)    TYPE(*PTR)                                             ADDRESS(*NULL)  
-    DCL        VAR(&SYDT_P)    TYPE(*PTR)                                             ADDRESS(*NULL)  
-    DCL        VAR(&SYDT_L)    TYPE(*UINT)               LEN(4)                       VALUE(0)        
-    DCL        VAR(&P_CCSID)   TYPE(*INT)                LEN(4)                       VALUE(1208)     
-    DCL        VAR(&ARGV_P)    TYPE(*PTR)                                             ADDRESS(&PATH)  
-    DCL        VAR(&ENV)       TYPE(*PTR)                                             ADDRESS(*NULL)  
-    DCL        VAR(&ENV_P)     TYPE(*PTR)                                             ADDRESS(&ENV)   
-    DCL        VAR(&RTCD)      TYPE(*INT)                LEN(4)                                       
-    CALLPRC    PRC('Qp2RunPase') PARM( +                                                              
+        PGM
+        DCL        VAR(&PATH)      TYPE(*CHAR)               LEN(50)
+        DCL        VAR(&SYNM_P)    TYPE(*PTR)                             ADDRESS(*NULL)
+        DCL        VAR(&SYDT_P)    TYPE(*PTR)                             ADDRESS(*NULL)
+        DCL        VAR(&SYDT_L)    TYPE(*UINT)               LEN(4)       VALUE(0)
+        DCL        VAR(&P_CCSID)   TYPE(*INT)                LEN(4)       VALUE(1208)
+        DCL        VAR(&ARGV_P)    TYPE(*PTR)                             ADDRESS(&PATH)
+        DCL        VAR(&ENV)       TYPE(*PTR)                             ADDRESS(*NULL)
+        DCL        VAR(&ENV_P)     TYPE(*PTR)                             ADDRESS(&ENV)
+        DCL        VAR(&RTCD)      TYPE(*INT)                LEN(4)
+        DCL        VAR(&NULL)      TYPE(*CHAR)               LEN(1)       VALUE(X'00')
+        CHGVAR     VAR(&PATH) VALUE('/usr/lib/start64' *CAT &NULL)
+        CALLPRC    PRC('Qp2RunPase') PARM( +
                                        (&PATH)           +                                            
                                        (&SYNM_P *BYVAL)  +                                            
                                        (&SYDT_P *BYVAL)  +                                            
@@ -17,4 +19,4 @@
                                        (&ARGV_P)         +             
                                        (&ENV_P *BYVAL)   +             
                                      ) RTNVAL(&RTCD)                   
-    ENDPGM                                                             
+        ENDPGM
