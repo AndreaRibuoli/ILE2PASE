@@ -1,2 +1,2 @@
-QCLSRC    BUILD     CLLE      Installation ILE CL
-QCLSRC    PROVA     CLLE      ILE CL example
+QCLSRC    PROVA     CLLE      QCLSRC/PROVA.CLLE
+QCLSRC    BUILD     CLLE      Development mode (CALL ILE2PASE/BUILD)
