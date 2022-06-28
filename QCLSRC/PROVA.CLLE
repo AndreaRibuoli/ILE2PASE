@@ -9,7 +9,6 @@
         DCL        VAR(&ENV_P)     TYPE(*PTR)                             ADDRESS(&ENV)
         DCL        VAR(&RTCD)      TYPE(*INT)                LEN(4)
         DCL        VAR(&NULL)      TYPE(*CHAR)               LEN(1)       VALUE(X'00')
-        SNDPGMMSG  MSG('Ciao Ivano!')
         CHGVAR     VAR(&PATH) VALUE('/usr/lib/start64' *CAT &NULL)
         CALLPRC    PRC('Qp2RunPase') PARM( +
                                        (&PATH)           +                                            
